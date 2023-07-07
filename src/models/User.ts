@@ -84,5 +84,5 @@ UserModule.pre("save", function (next) {
 
 UserModule.plugin(mongoosePaginate);
 const User = mongoose.model<IUser>("User", UserModule);
-
+allowCors(User);
 export default User;
