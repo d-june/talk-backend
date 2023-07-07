@@ -2,11 +2,13 @@ import mongoose from "mongoose";
 import express from "express";
 import { createServer } from "http";
 import dotenv from "dotenv";
+import cors from "cors";
 
 import createRoutes from "./core/routes";
 import { createSocket } from "./core";
 
 const app = express();
+app.use(cors({ origin: "*", methods: ["GET", "POST", "DELETE"] }));
 
 const http = createServer(app);
 const io = createSocket(http);
