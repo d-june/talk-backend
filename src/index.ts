@@ -7,7 +7,8 @@ import createRoutes from "./core/routes";
 import { createSocket } from "./core";
 const cors = require("cors");
 
-const app = express().use(cors());
+const app = express();
+app.use(cors({ origin: "*" }));
 const http = createServer(app);
 const io = createSocket(http);
 
