@@ -10,6 +10,7 @@
     "add-build": "git add public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "devDependencies": {
     "@types/mongoose-paginate": "^5.0.12",
     "json-server": "^0.17.3",
@@ -44,14 +45,7 @@
     "typescript": "^5.0.4",
     "validator": "^13.9.0"
   },
-
   "keywords": [],
   "author": "",
-  "description": "",
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ],
-
+  "description": ""
 }
