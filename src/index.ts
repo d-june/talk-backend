@@ -8,7 +8,7 @@ import createRoutes from "./core/routes";
 import { createSocket } from "./core";
 
 const app = express();
-app.use(cors({ origin: "*", methods: ["GET", "POST", "DELETE"] }));
+app.use(cors({ origin: "*", methods: ["GET", "POST", "DELETE", "OPTIONS"] }));
 
 const http = createServer(app);
 const io = createSocket(http);
