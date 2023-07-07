@@ -15,8 +15,8 @@ dotenv.config();
 createRoutes(app, io);
 
 // @ts-ignore
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGO_URI);
 
-http.listen(process.env.PORT, function () {
+http.listen(process.env.PORT || 9999, function () {
   console.log(`Server: http://localhost: ${process.env.PORT}`);
 });
