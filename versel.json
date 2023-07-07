@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "talk-backend",
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@versel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}
