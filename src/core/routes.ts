@@ -18,6 +18,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   const MessageController = new MessageCtrl(io);
   const UploadFileController = new UploadCtrl();
   const PostController = new PostCtrl();
+  import cors from "cors";
 
   app.use(bodyParser.json());
 
@@ -29,7 +30,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   app.get("/user/me", UserController.getMe);
   app.post("/user/registration/verify", UserController.verify);
   app.post("/user/registration", registerValidation, UserController.create);
-  app.post("/user/login", loginValidation, UserController.login);
+  app.post("/user/login", cors(), loginValidation, UserController.login);
   app.get("/user/status/:id", UserController.getUserStatus);
   app.get("/user/profile/:id", UserController.getProfile);
   app.post("/user/status", UserController.updateStatus);
