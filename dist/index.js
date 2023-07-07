@@ -14,7 +14,8 @@ const http = (0, http_1.createServer)(app);
 const io = (0, core_1.createSocket)(http);
 dotenv_1.default.config();
 (0, routes_1.default)(app, io);
-mongoose_1.default.connect("mongodb://127.0.0.1:27017/chat");
+// @ts-ignore
+mongoose_1.default.connect(process.env.MONGODB_URL);
 http.listen(process.env.PORT, function () {
     console.log(`Server: http://localhost: ${process.env.PORT}`);
 });

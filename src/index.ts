@@ -14,7 +14,8 @@ dotenv.config();
 
 createRoutes(app, io);
 
-mongoose.connect("mongodb://127.0.0.1:27017/chat");
+// @ts-ignore
+mongoose.connect(process.env.MONGODB_URL);
 
 http.listen(process.env.PORT, function () {
   console.log(`Server: http://localhost: ${process.env.PORT}`);
