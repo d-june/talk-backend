@@ -7,8 +7,14 @@ import createRoutes from "./core/routes";
 import { createSocket } from "./core";
 const cors = require("cors");
 
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors(corsOptions));
 const http = createServer(app);
 const io = createSocket(http);
 
