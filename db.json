@@ -1,0 +1,148 @@
+{
+  "dialogs": [
+    {
+      "_id": "172e5dfe57dc7075cc2b681ce2b0e5b6",
+      "text": "Вставь тут текст подлиннее",
+      "isReaded": false,
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "unreaded": 5,
+      "user": {
+        "_id": "152e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": null,
+        "isOnline": true
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "126e5dfe57dc7075cc2b681ce2b0e5b6",
+      "text": "Вставь тут текст подлиннее",
+      "isReaded": false,
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "unreaded": 0,
+      "user": {
+        "_id": "251e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Кот",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI=",
+        "isOnline": true
+      },
+      "dialog": "126e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "152e5dfe57dc7075cc2b681ce2b0e5b6",
+      "text": "Вставь тут текст подлиннее",
+      "isReaded": false,
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "unreaded": 0,
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI=",
+        "isOnline": true
+      },
+      "dialog": "172e5dfe57dc7075cc2b681ce2b0e5b6"
+    }
+  ],
+  "messages": [
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },{
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": "https://media.istockphoto.com/id/1281804798/photo/very-closeup-view-of-amazing-domestic-pet-in-mirror-round-fashion-sunglasses-is-isolated-on.jpg?s=612x612&w=0&k=20&c=oMoz9rUr-rDhMGNmEepCkr7F1g3AXs9416hvVnT_4CI="
+      },
+      "dialog": "152e5dfe57dc7075cc2b681ce2b0e5b6"
+    },
+
+
+    {
+      "_id": "f13621c90de9bd9ef516bea0b184fd30",
+      "text": "Текст сообщения3. Длинный текст сообщения",
+      "createdAt": "Sat Apr 22 2023 13:51:39 GMT+0000 (UTS)",
+      "user": {
+        "_id": "397e5dfe57dc7075cc2b681ce2b0e5b6",
+        "fullName": "Somebody",
+        "avatar": null
+      },
+      "dialog": "172e5dfe57dc7075cc2b681ce2b0e5b6"
+    }
+  ]
+}
