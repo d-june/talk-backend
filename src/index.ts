@@ -9,8 +9,9 @@ const cors = require("cors");
 
 const corsOptions = {
   origin: "*",
-  credentials: true, //access-control-allow-credentials:true
+  credentials: true,
   optionSuccessStatus: 200,
+  methods: ["GET", "POST", "DELETE"],
 };
 
 const app = express();
@@ -26,5 +27,5 @@ createRoutes(app, io);
 mongoose.connect(process.env.MONGO_URI);
 
 http.listen(process.env.PORT || 9999, function () {
-  console.log(`Server: http://localhost: ${process.env.PORT}`);
+  console.log(`Server:  ${process.env.PORT}`);
 });
