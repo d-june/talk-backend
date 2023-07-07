@@ -5,17 +5,9 @@ import dotenv from "dotenv";
 
 import createRoutes from "./core/routes";
 import { createSocket } from "./core";
-const cors = require("cors");
-
-const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionSuccessStatus: 200,
-  methods: ["GET", "POST", "DELETE"],
-};
 
 const app = express();
-app.use(cors(corsOptions));
+allowCors(app);
 const http = createServer(app);
 const io = createSocket(http);
 
