@@ -1,8 +1,0 @@
-[build]
-  command = "yarn build"
-  functions = "lambda"
-
-[[redirects]]
-    from = "/"
-    to = "/.netlify/functions/index"
-    status = 200
