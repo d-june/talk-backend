@@ -58,5 +58,8 @@
   },
   "keywords": [],
   "author": "",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": ">=14 <15"
+  }
 }
