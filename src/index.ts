@@ -25,6 +25,6 @@ createRoutes(app, io);
 // @ts-ignore
 mongoose.connect(process.env.MONGO_URI);
 
-http.listen(process.env.PORT || 9999, function () {
+http.listen(process.env.PORT, function () {
   console.log(`Server:  ${process.env.PORT}`);
 });
