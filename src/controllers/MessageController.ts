@@ -17,7 +17,7 @@ class MessageController {
 
     MessageModel.updateMany(
       { dialog: dialogId, user: { $ne: userId } },
-      { $set: { readed: true } }
+      { $set: { read: true } }
     );
 
     MessageModel.find({ dialog: dialogId })
