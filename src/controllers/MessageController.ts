@@ -15,17 +15,16 @@ class MessageController {
     const dialogId = req.query.dialog;
     const userId = req.user._id;
 
-    MessageModel.updateMany(
-      { dialog: dialogId, user: { $ne: userId } },
-      { $set: { read: true } },
-      {
-        upsert: true,
-      }
-    );
-
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog", "user", "attachments"])
       .then((messages) => {
+        MessageModel.updateMany(
+          { dialog: dialogId, user: { $ne: userId } },
+          { $set: { read: true } },
+          {
+            upsert: true,
+          }
+        );
         if (!messages) {
           return res.status(404).json({
             status: "error",
