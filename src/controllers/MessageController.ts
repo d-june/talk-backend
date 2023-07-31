@@ -1,6 +1,8 @@
 import express from "express";
 import { DialogModel, MessageModel } from "../models";
 import socket from "socket.io";
+import message from "../models/Message";
+import dialogController from "./DialogController";
 
 class MessageController {
   io: socket.Server;
@@ -13,19 +15,7 @@ class MessageController {
     const dialogId = req.query.dialog;
     const userId = req.user._id;
 
-    try {
-      MessageModel.updateMany(
-        { dialog: dialogId, user: { $ne: userId } },
-        { $set: { read: true } }
-      );
-    } catch (err) {
-      res.status(500).json({
-        status: "error",
-        message: err,
-      });
-    }
-
-    DialogModel.updateMany(
+    MessageModel.updateMany(
       { dialog: dialogId, user: { $ne: userId } },
       { $set: { read: true } },
       {
@@ -38,6 +28,18 @@ class MessageController {
         });
       }
     });
+
+    MessageModel.find({ dialog: dialogId })
+      .populate(["dialog", "user", "attachments"])
+      .then((messages) => {
+        if (!messages) {
+          return res.status(404).json({
+            status: "error",
+            message: "Message not found",
+          });
+        }
+        return res.json(messages);
+      });
   }
 
   create = (req: any, res: express.Response) => {
