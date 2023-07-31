@@ -11,11 +11,10 @@ class MessageController {
     this.io = io;
   }
 
-  updateReadStatus = (
-    res: express.Response,
-    userId: string,
-    dialogId: string
-  ): void => {
+  async index(req: any, res: express.Response) {
+    const dialogId = req.query.dialog;
+    const userId = req.user._id;
+
     MessageModel.updateMany(
       { dialog: dialogId, user: { $ne: userId } },
       { $set: { read: true } },
@@ -33,13 +32,6 @@ class MessageController {
         }
       }
     );
-  };
-
-  async index(req: any, res: express.Response) {
-    const dialogId = req.query.dialog;
-    const userId = req.user._id;
-
-    this.updateReadStatus(res, userId, dialogId);
 
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog", "user", "attachments"])
