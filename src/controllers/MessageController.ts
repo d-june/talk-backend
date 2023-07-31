@@ -1,6 +1,7 @@
 import express from "express";
 import { DialogModel, MessageModel } from "../models";
 import socket from "socket.io";
+import { tr } from "date-fns/locale";
 
 class MessageController {
   io: socket.Server;
@@ -12,7 +13,8 @@ class MessageController {
   updateReadStatus = (userId: string, dialogId: string): void => {
     MessageModel.updateMany(
       { dialog: dialogId, user: { $ne: userId } },
-      { $set: { read: true } }
+      { $set: { read: true } },
+      { upsert: true }
     ).then((err: any) => {
       this.io.emit("SERVER:MESSAGES_READED", {
         userId,
