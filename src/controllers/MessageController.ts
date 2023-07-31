@@ -23,11 +23,6 @@ class MessageController {
         status: "error",
         message: err,
       });
-    } finally {
-      this.io.emit("SERVER:MESSAGES_READED", {
-        userId,
-        dialogId,
-      });
     }
 
     MessageModel.find({ dialog: dialogId })
