@@ -15,7 +15,7 @@ export default (http: http.Server) => {
       socket.join(dialogId);
     });
     socket.on("DIALOGS:TYPING", (obj: any) => {
-      socket.broadcast.emit("DIALOGS:TYPING", obj);
+      socket.to(obj.dialogId).broadcast.emit("DIALOGS:TYPING", obj);
     });
   });
 
