@@ -25,17 +25,19 @@ class MessageController {
       });
     }
 
-    MessageModel.find({ dialog: dialogId })
-      .populate(["dialog", "user", "attachments"])
-      .then((messages) => {
-        if (!messages) {
-          return res.status(404).json({
-            status: "error",
-            message: "Message not found",
-          });
-        }
-        return res.json(messages);
-      });
+    DialogModel.updateMany(
+      { dialog: dialogId, user: { $ne: userId } },
+      { $set: { read: true } },
+      {
+        upsert: true,
+      }
+    ).then((err) => {
+      if (err) {
+        return res.status(500).json({
+          status: "error",
+        });
+      }
+    });
   }
 
   create = (req: any, res: express.Response) => {
