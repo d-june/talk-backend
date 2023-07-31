@@ -1,8 +1,6 @@
 import express from "express";
 import { DialogModel, MessageModel } from "../models";
 import socket from "socket.io";
-import message from "../models/Message";
-import dialogController from "./DialogController";
 
 class MessageController {
   io: socket.Server;
@@ -11,20 +9,27 @@ class MessageController {
     this.io = io;
   }
 
-  async index(req: any, res: express.Response) {
+  updateReadStatus = (userId: string, dialogId: string): void => {
+    MessageModel.updateMany(
+      { dialog: dialogId, user: { $ne: userId } },
+      { $set: { read: true } }
+    ).then((err: any) => {
+      this.io.emit("SERVER:MESSAGES_READED", {
+        userId,
+        dialogId,
+      });
+    });
+  };
+
+  index = (req: any, res: express.Response) => {
     const dialogId = req.query.dialog;
     const userId = req.user._id;
+
+    this.updateReadStatus(userId, dialogId);
 
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog", "user", "attachments"])
       .then((messages) => {
-        MessageModel.updateMany(
-          { dialog: dialogId, user: { $ne: userId } },
-          { $set: { read: true } },
-          {
-            upsert: true,
-          }
-        );
         if (!messages) {
           return res.status(404).json({
             status: "error",
@@ -33,7 +38,7 @@ class MessageController {
         }
         return res.json(messages);
       });
-  }
+  };
 
   create = (req: any, res: express.Response) => {
     const userId = req.user._id;
