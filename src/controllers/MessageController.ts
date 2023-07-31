@@ -21,13 +21,7 @@ class MessageController {
       {
         upsert: true,
       }
-    ).then((err) => {
-      if (err) {
-        return res.status(500).json({
-          status: "error",
-        });
-      }
-    });
+    );
 
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog", "user", "attachments"])
